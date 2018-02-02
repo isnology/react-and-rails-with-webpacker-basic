@@ -1,12 +1,15 @@
 import React, { Component, Fragment } from 'react'
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
-import './styles/app.scss'
 
 
 class App extends Component {
+  state = {
+    text: "How are you all"
+  }
 
-  // <Route path='/' render={() => <QuotesDisplay state={ this.state } />} />
   render() {
+    const { text } = this.state
+
     return (
         <Router>
           <div className="App">
@@ -15,7 +18,7 @@ class App extends Component {
               <Route path='/' render={ () => (
                 <Fragment>
                   <h1>Hello World</h1>
-                  <p>How are you?</p>
+                  <p>{ text }?</p>
                 </Fragment>
               )}/>
 
