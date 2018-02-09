@@ -1,5 +1,5 @@
 # to setup this app
-- from command line - rails new webpacker-basic --webpack=react
+- from command line - rails new webpacker-basic --webpack=react --database=postgresql -T
 - create a Procfile.dev in the root directory of the app and add the following lines to it.
 ```
 web: bundle exec rails s
